@@ -1,0 +1,247 @@
+.space-launch {
+  .container {
+    background-color: lightgray;
+    display: flex;
+    h1 {
+      margin-left: 40%;
+    }
+    .loader {
+      animation: spin 2s linear infinite;
+      border: 16px solid #f3f3f3;
+      border {
+        radius: 50%;
+        border-top: 16px solid #3498db;
+      }
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      width: 120px;
+    }
+    .left-container {
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      height: fit-content;
+      padding-bottom: 5%;
+      transition: 0.3s;
+      width: 20%;
+      .filter-title {
+        text-align: center;
+      }
+      .filter-title:not(:first-child) {
+        margin-top: 30px;
+      }
+      .left-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    .left-container:hover {
+      box-shadow: 0 8px 16px 0 #4eaf48;
+    }
+    .launch-land-button {
+      text-align: center;
+    }
+    button {
+      background-color: lightgreen;
+      border: unset;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 10px;
+      padding: 10px 25px;
+      margin: 5px;
+    }
+    button:hover {
+      background-color: #4eaf48;
+    }
+
+    
+    .right-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      .launch-card {
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        height: fit-content;
+        transition: 0.3s;
+        width: 24%;
+        h4 {
+          li,
+          span {
+            color: gray;
+          }
+        }
+      }
+      .launch-card-section {
+        padding: 10px;
+        h4 {
+          color: #696969;
+        }
+      }
+    }
+  }
+
+  .left-child-container {
+    width: 80%;
+    position: relative;
+    left: 10%;
+  }
+  figure {
+    align-items: center;
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+
+  footer {
+    padding: 30px;
+    text-align: center;
+  }
+  hr {
+    width: 70%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .filter-text {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  
+  // For Mobile
+  @media only screen and (max-width: 700px) {
+    .container {
+      display: block;
+      flex-direction: column;
+      aside {
+        width: 100%;
+      }
+      .left-container {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    #launchCardContainer {
+      display: block;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 100%;
+      .launch-card {
+        margin: 0 auto;
+        width: 75%;
+      }
+      .launch-card-section {
+        margin-top: 10px;
+      }
+    }
+    #launchCardContainer > div {
+      margin-top: 10px;
+    }
+
+    .launch-year {
+      width: 50%;
+      .year-btn {
+        text-align: center;
+      }
+    }
+  }
+
+  // For Tablet
+  @media only screen and (min-width: 700px) and (max-width: 1024px) {
+    #filterContainer {
+      width: 33.33%;
+      margin: 0;
+    }
+
+    #launchCardContainer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 66%;
+      .launch-card {
+        margin-left: 1%;
+        width: 49%;
+      }
+    }
+    .right-container > div {
+      margin: 0 0 10px 0;
+    }
+
+    .launch-year {
+      width: 50%;
+      .year-btn {
+        text-align: center;
+      }
+    }
+    .filter-text {
+      padding: 0 0 0 15px;
+    }
+  }
+
+  // For Desktop
+  @media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    #filterContainer {
+      margin: 0;
+      width: 20%;
+      .launch-year {
+        width: 50%;
+        .year-btn {
+          text-align: center;
+        }
+      }
+      .filter-text {
+        padding-left: 0 0 0 15px;
+      }
+    }
+
+    #launchCardContainer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 80%;
+      .launch-card {
+        width: 24%;
+        margin-left: 1%;
+      }
+    }
+    #launchCardContainer > div {
+      margin: 0 0 10 0;
+    }
+  }
+
+  /***** BEYOND 1440PX VIEWPORT *****/
+  @media only screen and (min-width: 1440px) {
+    .container {
+      padding: 0 10px;
+      margin: 0 auto;
+      max-width: 1440px;
+      #filterContainer {
+        margin: 0;
+        width: 20%;
+        .launch-year {
+          width: 50%;
+          .year-btn {
+            text-align: center;
+          }
+        }
+        .filter-text {
+          padding-top: 0 0 0 15px;
+        }
+      }
+      #launchCardContainer {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        .launch-card {
+          width: 24%;
+          margin-left: 1%;
+        }
+      }
+    }
+
+    #launchCardContainer > div {
+      margin: 0 0 10px 0;
+    }
+  }
+}
